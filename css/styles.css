@@ -1,0 +1,353 @@
+/* Variables */
+:root {
+    --color-body: #f23237;
+    ---blanco: #ffffff;
+    ---oscuro: #353535;
+    ---grisClaro: #e1e1e1;
+
+    /* Fonts */
+    ---fuenteUno: 'Roboto', sans-serif;
+    ---fuenteDos: 'Lato', sans-serif;
+}
+
+/* Reset de estilos básicos */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--color-body);
+    font-family: var(---fuenteUno);
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos universales */
+h1, h2, h3 {
+    font-weight: 900;
+    text-align: center;
+    color: var(---blanco);
+}
+
+h2 {
+    font-size: 3.2rem;
+    margin: 0;
+    text-shadow: 1px 2px 2px #222;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+/* Alertas para luego insertar dinamicamente */
+.alert-red{
+   background-color: rgb(157, 0, 0); 
+}
+.alert-green{
+    background-color: #10b981;
+}
+.div-alert {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: .8rem;
+    border-radius: 0.25rem;
+    text-align: center;
+    padding: 1rem;
+    color: var(---blanco);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+    .div-alert {
+        width: 70%;
+    }
+}
+@media (min-width: 1920px) {
+    .div-alert {
+        width: 80%;
+    }
+}
+
+.text-color {
+    text-align: center;
+    padding-right: 1rem;
+}
+
+/* Estilos para el contenedor principal */
+.grid-content {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../img/Tinogasta.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+@media (min-width: 1080px) {
+    .grid-content {
+        background-position: 100% 100%;
+    }
+}
+
+.container-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;  
+    margin: 0 auto;
+    gap: 15rem;
+}
+
+@media (min-width: 1080px) {
+    .container-principal {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 6rem;
+        margin-top: 2rem;
+    }
+}
+
+/* Clases utilizadas en el título principal */
+.title {
+    text-align: center;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+    font-size: 4rem;
+    color: var(---blanco);
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 4.8rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .title {
+        font-size: 5.5rem;
+    }
+}
+
+.title .text-color {
+    color: var(---oscuro);
+}
+
+/* Estilos para los lados izquierdo y derecho */
+.lado-izquierdo,
+.lado-derecho {
+    width: 100%;
+    max-width: 500px;  
+}
+
+@media (min-width: 1080px) {
+    .lado-izquierdo,
+    .lado-derecho {
+        width: 45%;
+        height: auto;
+    }
+}
+
+.lado-izquierdo p,
+.lado-derecho p {
+    color: var(---blanco);
+    font-size: 1.8rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+/* Estilos para el formulario */
+.formulario {
+    background-color: rgba(255, 255, 255, 0.815);
+    border-radius: 0.5rem;
+    padding: 1.25rem;
+    width: 90%;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+@media (min-width: 768px) {
+    .formulario {
+        padding: 2rem;
+        width: 70%;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 1920px) {
+    .formulario {
+        width: 80%;
+        margin-bottom: 0;
+    }
+}
+
+.formulario label {
+    color: var(---oscuro);
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.formulario input,
+.formulario textarea {
+    border: 0.2rem solid #cbd5e0;
+    width: 100%;
+    padding: 1.2rem;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.formulario input::placeholder,
+.formulario textarea::placeholder {
+    color: #a0aec0;
+    font-size: 1.4rem;
+}
+
+.formulario div {
+    margin-bottom: 1rem;
+}
+
+.formulario div:last-child {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1920px) {
+    .formulario label {
+        font-size: 1.5rem;
+    }
+    .formulario input,
+    .formulario textarea {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Estilos para el botón */
+.boton {
+    background-color: #10b981;
+    color: #fff;
+    width: 100%;
+    padding: 0.75rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.4rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #036e4b;
+}
+
+/* Estilos para el lado derecho del contenedor principal */
+.lado-derecho {
+    width: 100%;
+    max-height: 500px; 
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #F23237 #f33e44;
+    display: flex;
+    flex-direction: column; 
+}
+
+@media (min-width: 1080px) {
+    .lado-derecho {
+        width: 100%;
+        max-height: auto; 
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 1920px) {
+    .lado-derecho {
+        max-height: 800px;
+    }
+}
+
+/* Estilos para la lista de pacientes */
+.lista-pacientes {
+    text-align: center;
+}
+
+.lista-pacientes p {
+    color: var(---oscuro);
+    font-size: 1.8rem;
+}
+
+.div-citas {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    background-color: rgba(255, 255, 255, 0.815);
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.75rem;
+    font-size: 1.8rem;
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .div-citas {
+        width: 90%;
+    }
+}
+
+.clase-paciente {
+    font-weight: normal;
+    margin-bottom: 0.75rem;
+    text-transform: none;
+}
+
+.span-bold {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Estilos para los botones dentro de la lista de pacientes */
+.flex-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.btn-edit, .btn-clear {
+    padding: 1.1rem;
+    width: 140px;
+    font-size: 1.6rem;
+    background-color: #10b981;
+    color: var(---blanco);
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .btn-edit, .btn-clear {
+        width: 180px;
+    }
+    .flex-btn {
+        justify-content: space-around;
+    }
+}
+
+.btn-clear {
+    background-color: #F23237;
+}
+.lista-pacientes .no-paciente{
+    color: #f3efef;
+}

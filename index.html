@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Administrador de Pacientes</title>
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&family=Roboto:wght@400;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+</head>
+
+<body>
+
+    <div class="grid-content">
+        <h1 class="title">
+            Pacientes de "Huellitas Felices"
+        </h1>
+
+        <div class="container-principal">
+            <div class="lado-izquierdo">
+                <h2>Seguimiento de Pacientes</h2>
+
+                <p>
+                    Añade Pacientes
+                </p>
+
+                <form id="formulario-cita" class="formulario">
+                    <div>
+                        <label for="paciente"> Nombre Paciente: </label>
+                        <input type="text" id="paciente" placeholder="Nombre Paciente" name="paciente" />
+                    </div>
+
+                    <div>
+                        <label for="propietario"> Nombre Propietario: </label>
+                        <input type="text" id="propietario" placeholder="Nombre Propietario" name="propietario" />
+                    </div>
+                    <div>
+                        <label for="email"> Email Contacto </label>
+                        <input type="email" id="email" placeholder="E-mail Contacto" name="email" />
+                    </div>
+
+                    <div>
+                        <label for="fecha"> Fecha Alta </label>
+                        <input type="date" id="fecha" name="fecha" />
+                    </div>
+
+                    <div>
+                        <label for="sintomas"> Síntomas </label>
+                        <textarea id="sintomas" name="sintomas" placeholder="Síntomas del Paciente"></textarea>
+                    </div>
+
+                    <input class="boton" type="submit" value="Registrar Paciente" />
+                </form>
+            </div>
+
+            <div class="lado-derecho">
+                <h2>Listado de Pacientes</h2>
+                <p class="subTitle">
+                    Administra tus Pacientes
+                </p>
+                <div id="citas" class="lista-pacientes">
+                    <p class="no-paciente">No Hay Pacientes</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
